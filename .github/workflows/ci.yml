@@ -29,7 +29,7 @@ jobs:
         run: ./gradlew detekt
 
       - name: Unit & Robolectric UI tests
-        run: ./gradlew testDebugUnitTest :core:domain:test
+        run: ./gradlew --continue testDebugUnitTest :core:domain:test
 
       - name: Android Lint
         run: ./gradlew :app:lintDebug

@@ -26,7 +26,9 @@ class FavoritesScreenTest {
     @Test
     fun loadingStateShowsProgress() {
         composeTestRule.setContent {
-            ShowcaseTheme { FavoritesContent(uiState = FavoritesUiState.Loading, onCharacterClick = {}) }
+            ShowcaseTheme(dynamicColor = false) {
+                FavoritesContent(uiState = FavoritesUiState.Loading, onCharacterClick = {})
+            }
         }
 
         composeTestRule.onNodeWithTag("loading").assertIsDisplayed()
@@ -35,7 +37,9 @@ class FavoritesScreenTest {
     @Test
     fun emptyStateShowsMessage() {
         composeTestRule.setContent {
-            ShowcaseTheme { FavoritesContent(uiState = FavoritesUiState.Empty, onCharacterClick = {}) }
+            ShowcaseTheme(dynamicColor = false) {
+                FavoritesContent(uiState = FavoritesUiState.Empty, onCharacterClick = {})
+            }
         }
 
         composeTestRule.onNodeWithText(string(R.string.feature_favorites_empty)).assertIsDisplayed()
@@ -45,7 +49,7 @@ class FavoritesScreenTest {
     fun clickOnFavoriteReportsItsId() {
         var clickedId: Int? = null
         composeTestRule.setContent {
-            ShowcaseTheme {
+            ShowcaseTheme(dynamicColor = false) {
                 FavoritesContent(
                     uiState = FavoritesUiState.Success(listOf(testCharacter(id = 42, name = "Morty Smith"))),
                     onCharacterClick = { clickedId = it },

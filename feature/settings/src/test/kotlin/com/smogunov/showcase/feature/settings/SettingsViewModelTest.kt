@@ -4,6 +4,7 @@ import com.smogunov.showcase.core.model.ThemeConfig
 import com.smogunov.showcase.core.testing.repository.FakeUserDataRepository
 import com.smogunov.showcase.core.testing.repository.defaultUserData
 import com.smogunov.showcase.core.testing.util.MainDispatcherRule
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest

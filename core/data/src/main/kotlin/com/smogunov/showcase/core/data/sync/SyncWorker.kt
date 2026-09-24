@@ -10,7 +10,7 @@ import dagger.assisted.AssistedInject
 
 /** Periodically refreshes favorites so they stay up to date even when the app is closed. */
 @HiltWorker
-internal class SyncWorker @AssistedInject constructor(
+class SyncWorker @AssistedInject constructor(
     @Assisted appContext: Context,
     @Assisted workerParams: WorkerParameters,
     private val favoritesRepository: FavoritesRepository,

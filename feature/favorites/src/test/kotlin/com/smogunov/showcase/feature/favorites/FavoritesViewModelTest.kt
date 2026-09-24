@@ -3,6 +3,7 @@ package com.smogunov.showcase.feature.favorites
 import com.smogunov.showcase.core.testing.data.testCharacter
 import com.smogunov.showcase.core.testing.repository.FakeFavoritesRepository
 import com.smogunov.showcase.core.testing.util.MainDispatcherRule
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
