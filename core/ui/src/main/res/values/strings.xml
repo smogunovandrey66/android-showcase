@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="core_ui_status_alive">Alive</string>
+    <string name="core_ui_status_dead">Dead</string>
+    <string name="core_ui_status_unknown">Unknown</string>
+    <string name="core_ui_species_and_status">%1$s · %2$s</string>
+</resources>

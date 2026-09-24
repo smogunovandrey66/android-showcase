@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_favorites_title">Favorites</string>
+    <string name="feature_favorites_empty">No favorites yet.\nTap the heart on a character to save it here.</string>
+</resources>

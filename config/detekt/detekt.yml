@@ -1,0 +1,36 @@
+# Overrides on top of detekt's default configuration (buildUponDefaultConfig = true).
+
+naming:
+  FunctionNaming:
+    # @Composable functions use PascalCase by convention.
+    ignoreAnnotated: ['Composable']
+  MatchingDeclarationName:
+    # navigation/XNavigation.kt files hold the route plus its NavGraphBuilder/NavController extensions.
+    excludes: ['**/navigation/**']
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Za-z0-9]*'
+
+complexity:
+  LongMethod:
+    ignoreAnnotated: ['Composable']
+  LongParameterList:
+    functionThreshold: 8
+    ignoreDefaultParameters: true
+  TooManyFunctions:
+    excludes: ['**/test/**', '**/androidTest/**']
+
+style:
+  MagicNumber:
+    ignorePropertyDeclaration: true
+    ignoreCompanionObjectPropertyDeclaration: true
+    excludes: ['**/test/**', '**/androidTest/**', '**/theme/**']
+    ignoreAnnotated: ['Composable', 'Preview']
+  UnusedPrivateMember:
+    ignoreAnnotated: ['Preview']
+  ForbiddenComment:
+    active: false
+
+formatting:
+  # Compose code routinely uses trailing lambdas and multiline expressions; keep ktlint pragmatic.
+  MultiLineIfElse:
+    active: false

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_details_back">Back</string>
+    <string name="feature_details_add_favorite">Add to favorites</string>
+    <string name="feature_details_remove_favorite">Remove from favorites</string>
+    <string name="feature_details_error">Could not load the character</string>
+    <string name="feature_details_retry">Retry</string>
+    <string name="feature_details_gender">Gender</string>
+    <string name="feature_details_origin">Origin</string>
+    <string name="feature_details_location">Last known location</string>
+    <string name="feature_details_episodes">Episodes</string>
+</resources>

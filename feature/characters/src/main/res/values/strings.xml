@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_characters_title">Characters</string>
+    <string name="feature_characters_error">Could not load characters</string>
+    <string name="feature_characters_empty">No characters yet</string>
+    <string name="feature_characters_retry">Retry</string>
+</resources>
