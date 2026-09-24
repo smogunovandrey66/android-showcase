@@ -14,6 +14,9 @@ plugins {
     alias(libs.plugins.room) apply false
 }
 
+// Resolved here: inside `subprojects {}` the `libs` accessor would point to the subproject.
+val detektFormatting = libs.detekt.formatting
+
 // Static analysis (detekt + ktlint rules via detekt-formatting) for every module.
 subprojects {
     apply(plugin = "io.gitlab.arturbosch.detekt")
@@ -34,6 +37,6 @@ subprojects {
     }
 
     dependencies {
-        "detektPlugins"(libs.detekt.formatting)
+        "detektPlugins"(detektFormatting)
     }
 }

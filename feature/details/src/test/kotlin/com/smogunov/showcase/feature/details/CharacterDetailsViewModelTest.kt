@@ -70,8 +70,9 @@ class CharacterDetailsViewModelTest {
 
     /** Skips transient Loading/intermediate emissions (StateFlow may conflate them). */
     private suspend fun ReceiveTurbine<CharacterDetailsUiState>.awaitSuccess(): CharacterDetailsUiState.Success {
-        var item = awaitItem()
-        while (item !is CharacterDetailsUiState.Success) item = awaitItem()
-        return item
+        while (true) {
+            val item = awaitItem()
+            if (item is CharacterDetailsUiState.Success) return item
+        }
     }
 }

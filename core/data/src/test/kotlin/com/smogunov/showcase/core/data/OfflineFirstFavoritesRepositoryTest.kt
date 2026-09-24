@@ -12,6 +12,7 @@ import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
 import io.mockk.slot
+import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import kotlin.test.Test
@@ -24,10 +25,10 @@ class OfflineFirstFavoritesRepositoryTest {
     private val favoriteDao = mockk<FavoriteDao>(relaxUnitFun = true)
     private val network = mockk<CharacterNetworkDataSource>()
 
-    private fun createRepository() = OfflineFirstFavoritesRepository(
+    private fun TestScope.createRepository() = OfflineFirstFavoritesRepository(
         favoriteDao = favoriteDao,
         network = network,
-        ioDispatcher = UnconfinedTestDispatcher(),
+        ioDispatcher = UnconfinedTestDispatcher(testScheduler),
     )
 
     @Test

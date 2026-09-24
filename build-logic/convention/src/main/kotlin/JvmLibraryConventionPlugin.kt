@@ -14,7 +14,7 @@ class JvmLibraryConventionPlugin : Plugin<Project> {
 
             dependencies {
                 add("testImplementation", libs.library("junit4"))
-                add("testImplementation", libs.library("kotlin-test"))
+                add("testImplementation", libs.library("kotlin-test-junit"))
             }
         }
     }
